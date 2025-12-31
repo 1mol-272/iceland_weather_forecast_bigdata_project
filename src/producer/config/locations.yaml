@@ -1,0 +1,10 @@
+locations:
+  reykjavik:
+    latitude: 64.13
+    longitude: -21.94
+  akureyri:
+    latitude: 65.68
+    longitude: -18.09
+  keflavik:
+    latitude: 63.99
+    longitude: -22.61
