@@ -228,6 +228,9 @@ source ./scripts/_load_env.sh
 
 ```
 
+> Azure VM Note (possible ephemeral `/mnt`): On many Azure VM images, `/mnt` may be backed by an ephemeral/temporary disk. Depending on the VM type/image and how storage is mounted, data under `/mnt` can be cleared or remounted after reboot/stop-start, which can break a pipeline that stores HDFS/YARN local data there. Symptoms often look like Hadoop daemons failing to start, “no live datanodes”, missing local dirs, or a DataNode clusterID mismatch .\
+> If you hit a similar situation, the typical recovery is to re-initialize the HDFS storage on that node: stop Hadoop, remove the stale NameNode/DataNode local data directories, format the NameNode (only if you’re OK losing the existing HDFS contents), then restart HDFS/YARN so all nodes register against the same clusterID. 
+
 ## 4 Monitoring - How to Access UIs (Hadoop / YARN / InfluxDB / Grafana)
 All web UIs are exposed from the **master** node.
 
