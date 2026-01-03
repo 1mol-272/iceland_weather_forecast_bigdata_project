@@ -1,0 +1,48 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 虚拟环境
+venv/
+.venv/
+.venv39/
+env/
+ENV/
+
+# VS Code
+.vscode/
+
+# 防止以后再往项目里扔 Git 安装目录
+Git/
+
+# Kagglehub 
+.cache/
+kagglehub/
+data/
+*.csv
+
+
+# for big data
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# secrets / local overrides
+!env/
+!BigData/env/local.env.example
+*.env
+!BigData/config/pipeline.env
+# spark/hadoop/kafka temp
+tmp/
+*.log
+.sparkStaging/
+checkpoints/
+metastore_db/
+# OS/editor
+.DS_Store
+.idea/
+.vscode/

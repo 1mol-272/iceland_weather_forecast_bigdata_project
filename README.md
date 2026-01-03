@@ -1,6 +1,6 @@
 # Big Data Weather Pipeline (Kafka + Spark + HDFS + InfluxDB + Grafana)
 
-## 1. Project Title & Overview
+## 1. Project Overview
 
 ### 1.1 Context & Motivation
 
